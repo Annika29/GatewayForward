@@ -37,7 +37,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Meet. Eat. Learn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZo-Tu-EA8">
                                 <rect key="frame" x="46" y="490" width="283" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="0.0" green="0.27450980392156865" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.42754181338028169" green="0.62472437258354052" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Gateway-Forward-Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="6hj-Df-mNl">
@@ -73,7 +73,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6hj-Df-mNl" firstAttribute="centerX" secondItem="B1D-dn-Laj" secondAttribute="centerX" id="6ur-W1-pof"/>
                             <constraint firstItem="6hj-Df-mNl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="C9d-wE-hiJ"/>
@@ -81,6 +81,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c3R-m9-szM" secondAttribute="trailing" constant="37" id="F6u-D3-o5m"/>
                             <constraint firstItem="6hj-Df-mNl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FTV-iM-TVT"/>
                             <constraint firstItem="6hj-Df-mNl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Oxl-fp-10J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B1D-dn-Laj" secondAttribute="bottom" constant="35" id="QXg-jt-m4q"/>
                             <constraint firstItem="B1D-dn-Laj" firstAttribute="leading" secondItem="5hu-2m-cfk" secondAttribute="trailing" constant="15" id="Sas-pi-GSg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c3R-m9-szM" secondAttribute="bottom" constant="40" id="T9F-iu-6f9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B1D-dn-Laj" secondAttribute="bottom" constant="35" id="a6t-w7-Zak"/>
@@ -110,12 +111,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GateWay Forward" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywm-DK-xSc">
-                                <rect key="frame" x="119.5" y="97" width="136" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bk2-sK-yEI">
                                 <rect key="frame" x="42" y="46" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
@@ -123,17 +118,29 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="hsp-bH-Eh8"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DP1-wO-6xf">
-                                <rect key="frame" x="67" y="177" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ARCH-2" translatesAutoresizingMaskIntoConstraints="NO" id="DP1-wO-6xf">
+                                <rect key="frame" x="52.5" y="248" width="270" height="171"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="Be6-NF-cTE"/>
+                                    <constraint firstAttribute="height" constant="171" id="iet-AK-8nA"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gateway-Forward-Logo-2-WHITE" translatesAutoresizingMaskIntoConstraints="NO" id="MZm-pE-CGj">
+                                <rect key="frame" x="39.5" y="84" width="296" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="lhT-vg-03v"/>
+                                    <constraint firstAttribute="width" constant="296" id="md6-oH-jZP"/>
+                                </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="bk2-sK-yEI" firstAttribute="leading" secondItem="0NY-iu-HKk" secondAttribute="leading" constant="42" id="2uN-ks-LYv"/>
-                            <constraint firstItem="Ywm-DK-xSc" firstAttribute="top" secondItem="0NY-iu-HKk" secondAttribute="top" constant="77" id="Acy-yb-E55"/>
+                            <constraint firstItem="DP1-wO-6xf" firstAttribute="centerX" secondItem="q0F-xw-uTq" secondAttribute="centerX" id="WbG-Tp-B9b"/>
+                            <constraint firstItem="MZm-pE-CGj" firstAttribute="centerX" secondItem="q0F-xw-uTq" secondAttribute="centerX" id="ajT-F4-0MI"/>
                             <constraint firstItem="bk2-sK-yEI" firstAttribute="top" secondItem="0NY-iu-HKk" secondAttribute="top" constant="26" id="czG-U1-d5L"/>
-                            <constraint firstItem="Ywm-DK-xSc" firstAttribute="centerX" secondItem="q0F-xw-uTq" secondAttribute="centerX" id="yjy-0t-7cd"/>
+                            <constraint firstItem="DP1-wO-6xf" firstAttribute="top" secondItem="MZm-pE-CGj" secondAttribute="bottom" constant="36" id="xu5-o5-OZ2"/>
+                            <constraint firstItem="0NY-iu-HKk" firstAttribute="bottom" secondItem="DP1-wO-6xf" secondAttribute="bottom" constant="248" id="zMk-OL-gzL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0NY-iu-HKk"/>
                     </view>
@@ -708,7 +715,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ARCH-2" width="1920" height="1080"/>
         <image name="Bosnian" width="470" height="235"/>
+        <image name="Gateway-Forward-Logo-2-WHITE" width="1128" height="340"/>
         <image name="Gateway-Forward-Logo.png" width="905" height="995"/>
         <image name="baseline_home_black_18dp" width="36" height="36"/>
         <image name="baseline_person_black_18dp" width="36" height="36"/>
@@ -716,9 +725,9 @@
         <image name="bbq" width="1920" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Kwc-EJ-Voe"/>
+        <segue reference="5C3-Dw-dri"/>
         <segue reference="aSu-y6-UoY"/>
         <segue reference="5Af-em-pdb"/>
-        <segue reference="hsp-bH-Eh8"/>
+        <segue reference="6KC-Jc-fe3"/>
     </inferredMetricsTieBreakers>
 </document>
