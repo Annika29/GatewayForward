@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:GatewayForward.xcodeproj">
+      location = "self:">
+   </FileRef>
+   <FileRef
+      location = "group:../../../Desktop/GatewayForward">
    </FileRef>
 </Workspace>
