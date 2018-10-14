@@ -12,29 +12,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var logInBtnOutlet: UIButton!
     
+    @IBOutlet weak var learnMore: UIButton!
+    @IBOutlet weak var signUpBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        //let ref = Database.database().reference()
-        
-        //ref.child("Users/Username1/name").setValue("Mike")
-        
-        //ref.childByAutoId().setValue(["name":"Tom", "role":"Admin", "age":30])
-        
-        /*
-        ref.child("someid/name").observeSingleEvent(of: .value)
-            { (snapshot) in
-            let employeedata = snapshot.value as?
-                [String:Any]
-        }
-        */
-        
-       // let updates = ["someid/name":"John", "-LOifgkhCcTDR7wROmGq/name":"David"]
-        //ref.updateChildValues(updates)
-        
-        //ref.child("someid").removeValue()
+        logInBtnOutlet.layer.cornerRadius = 10
+        signUpBtn.layer.cornerRadius = 10
+        learnMore.layer.cornerRadius = 10
         
     }
 
@@ -44,20 +28,6 @@ class ViewController: UIViewController {
     }
 
     
-    @IBAction func logInBtn(_ sender: Any) {
-        
-    }
-    
-    
-    
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("Segueingg")
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
     
 }
 
