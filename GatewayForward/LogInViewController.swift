@@ -14,10 +14,13 @@ class LogInViewController: UIViewController {
     
     @IBOutlet weak var pass: UITextField!
     
+    @IBOutlet weak var logIn: UIButton!
     
+    @IBOutlet weak var signUp: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        logIn.layer.cornerRadius = 10
+        signUp.layer.cornerRadius = 10
         print("view did load from Log In View Controller")
         // Do any additional setup after loading the view.
     }

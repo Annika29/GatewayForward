@@ -15,19 +15,22 @@ class SignUp: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var nationality: UITextField!
     @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var nameEdit: UILabel!
-    @IBOutlet weak var nationalityEdit: UILabel!
     
     @IBOutlet weak var retypeYourPassword: UITextField!
     
     var ref:DatabaseReference?
+    
+    @IBOutlet weak var signUp: UIButton!
+    @IBOutlet weak var logIn: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         ref = Database.database().reference()
-        
+        signUp.layer.cornerRadius = 10
+        logIn.layer.cornerRadius = 10
         
     }
     

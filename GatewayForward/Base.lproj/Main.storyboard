@@ -30,8 +30,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="logInBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3d1-cr-CBa"/>
-                                    <segue destination="vzb-95-zlY" kind="presentation" id="aSu-y6-UoY"/>
+                                    <segue destination="vzb-95-zlY" kind="presentation" id="cKc-iO-yZY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Connecting Communities" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZo-Tu-EA8">
@@ -243,7 +242,6 @@
                                 </state>
                                 <connections>
                                     <action selector="signUp:" destination="MCL-6r-rFm" eventType="touchUpInside" id="sMN-0S-O6F"/>
-                                    <segue destination="4ph-Ox-rcu" kind="presentation" id="5C3-Dw-dri"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bAG-RX-0if">
@@ -289,9 +287,11 @@
                     </view>
                     <connections>
                         <outlet property="email" destination="97s-Jy-jgE" id="glm-wn-5PG"/>
+                        <outlet property="logIn" destination="08e-EF-niW" id="g15-4C-GiO"/>
                         <outlet property="nationality" destination="bAG-RX-0if" id="Svd-pH-y62"/>
                         <outlet property="password" destination="dRO-Be-iAy" id="r8d-ji-Hf1"/>
                         <outlet property="retypeYourPassword" destination="lf7-zO-24P" id="JQm-Gp-LXs"/>
+                        <outlet property="signUp" destination="p08-Su-pIl" id="BUs-xz-beH"/>
                         <outlet property="userName" destination="BR1-JP-UK4" id="NoI-2G-9cD"/>
                     </connections>
                 </viewController>
@@ -342,8 +342,11 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0D-yx-WRq">
-                                <rect key="frame" x="163" y="315.5" width="49" height="36"/>
+                                <rect key="frame" x="137.5" y="315.5" width="100" height="36"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.82745098039999998" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="nU7-OH-r1U"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -359,10 +362,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drn-py-ppR">
-                                <rect key="frame" x="157.5" y="405" width="60" height="30"/>
+                                <rect key="frame" x="147.5" y="405" width="80" height="30"/>
                                 <color key="backgroundColor" red="0.34509803919999998" green="0.45098039220000002" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="TG4-p6-W4n"/>
+                                    <constraint firstAttribute="width" constant="80" id="TG4-p6-W4n"/>
                                 </constraints>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -386,7 +389,9 @@
                         <viewLayoutGuide key="safeArea" id="mKC-LF-rbA"/>
                     </view>
                     <connections>
+                        <outlet property="logIn" destination="t0D-yx-WRq" id="5Fg-be-cDk"/>
                         <outlet property="pass" destination="AJm-nB-fn9" id="LKO-Pn-HdT"/>
+                        <outlet property="signUp" destination="drn-py-ppR" id="wAo-LE-EjZ"/>
                         <outlet property="userName" destination="cj4-B4-lkU" id="l3z-05-2l1"/>
                         <segue destination="4ph-Ox-rcu" kind="show" identifier="tabVC" id="Kwc-EJ-Voe"/>
                     </connections>
@@ -620,7 +625,7 @@
         <!--Profile-->
         <scene sceneID="1M2-1o-y75">
             <objects>
-                <viewController id="xV1-ph-FUk" customClass="SignUp" customModule="GatewayForward" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xV1-ph-FUk" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PLD-uP-6Va">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -631,6 +636,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iae-jv-4m0">
+                                <rect key="frame" x="2.5" y="183" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="belmin.husic@slu.edu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1II-DN-zHp">
                                 <rect key="frame" x="200" y="577" width="167" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -638,21 +649,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nationality:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfL-5c-8Vc">
-                                <rect key="frame" x="51" y="222" width="86" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Belmin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUz-ST-deo">
-                                <rect key="frame" x="161.5" y="183" width="52" height="21"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="6.5" y="222" width="86" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Bosnian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wv5-TF-1Bc">
-                                <rect key="frame" x="157" y="222" width="61" height="21"/>
+                                <rect key="frame" x="112.5" y="222" width="150" height="21"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="i5v-N7-HcE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -663,8 +670,9 @@
                                     <constraint firstAttribute="width" constant="250" id="qFk-ga-9YE"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iae-jv-4m0">
-                                <rect key="frame" x="51.5" y="183" width="84" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Belmin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUz-ST-deo">
+                                <rect key="frame" x="157" y="182" width="175" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -677,6 +685,7 @@
                             <constraint firstItem="QUz-ST-deo" firstAttribute="leading" secondItem="iae-jv-4m0" secondAttribute="trailing" constant="26" id="8XH-kt-hGn"/>
                             <constraint firstItem="hXQ-5O-Fom" firstAttribute="top" secondItem="wv5-TF-1Bc" secondAttribute="bottom" constant="14" id="9NJ-d7-gIE"/>
                             <constraint firstItem="cfL-5c-8Vc" firstAttribute="top" secondItem="iae-jv-4m0" secondAttribute="bottom" constant="18" id="ASw-Bv-Fmr"/>
+                            <constraint firstItem="QUz-ST-deo" firstAttribute="width" secondItem="wv5-TF-1Bc" secondAttribute="width" id="G9e-q1-Z57"/>
                             <constraint firstItem="wv5-TF-1Bc" firstAttribute="centerX" secondItem="PLD-uP-6Va" secondAttribute="centerX" id="OY8-iW-RDa"/>
                             <constraint firstItem="1II-DN-zHp" firstAttribute="top" secondItem="hXQ-5O-Fom" secondAttribute="bottom" constant="85" id="Ot7-iz-Ph1"/>
                             <constraint firstItem="LnI-Zh-yVR" firstAttribute="trailing" secondItem="1II-DN-zHp" secondAttribute="trailing" constant="8" id="ac5-Lc-x8F"/>
@@ -691,10 +700,6 @@
                         <viewLayoutGuide key="safeArea" id="LnI-Zh-yVR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="baseline_person_black_18dp" selectedImage="baseline_person_black_18dp" id="MRr-j9-Kae"/>
-                    <connections>
-                        <outlet property="nameEdit" destination="QUz-ST-deo" id="G33-Cz-JDs"/>
-                        <outlet property="nationalityEdit" destination="wv5-TF-1Bc" id="GBo-3c-bak"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7h-go-FCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -751,8 +756,7 @@
         <image name="party" width="1920" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Kwc-EJ-Voe"/>
-        <segue reference="aSu-y6-UoY"/>
+        <segue reference="H4T-el-cZO"/>
         <segue reference="5QT-PF-pPz"/>
         <segue reference="6KC-Jc-fe3"/>
     </inferredMetricsTieBreakers>
